@@ -28,7 +28,7 @@
   </div>
 </template>
 <script>
-import Axios from 'axios';
+import  request  from "@/utils/request";
 
 export default {
   name: 'Login',
@@ -78,22 +78,22 @@ export default {
     login() {
       this.$refs.form.validate((isOK) => {
         if (isOK) {
-          alert('登陆成功')
-          // this.$store.dispatch('user/login', this.loginForm)
+          // alert('登陆成功')
+          this.$store.dispatch('user/login', this.loginForm)
         }
       })
     },
-    // testAjax(){
-    //   Axios({
-    //     // url:'https://heimahr.itheima.net/api/sys/login',
-    //     url:'/api/sys/login',
-    //     methods:'post',
-    //     data:{
-    //       mobile:'13800000002',
-    //       password:'hm#qd@23!'
-    //     }
-    //   })
-    // }
+    testAjax(){
+      request({
+        // url:'https://heimahr.itheima.net/api/sys/login',
+        url:'/sys/login',
+        method:'post',
+        data:{
+          mobile:'13800000002',
+          password:'hm#qd@23!'
+        }
+      })
+    }
   }
 }
 </script>
