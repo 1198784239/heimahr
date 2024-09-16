@@ -21,12 +21,15 @@
           <el-form-item>
             <el-button style="width:350px" type="primary" @click="login">登录</el-button>
           </el-form-item>
+          <el-button  @click="testAjax">测试按钮</el-button>
         </el-form>
       </el-card>
     </div>
   </div>
 </template>
 <script>
+import Axios from 'axios';
+
 export default {
   name: 'Login',
   data() {
@@ -75,10 +78,22 @@ export default {
     login() {
       this.$refs.form.validate((isOK) => {
         if (isOK) {
-          alert('校验通过')
+          alert('登陆成功')
+          // this.$store.dispatch('user/login', this.loginForm)
         }
       })
-    }
+    },
+    // testAjax(){
+    //   Axios({
+    //     // url:'https://heimahr.itheima.net/api/sys/login',
+    //     url:'/api/sys/login',
+    //     methods:'post',
+    //     data:{
+    //       mobile:'13800000002',
+    //       password:'hm#qd@23!'
+    //     }
+    //   })
+    // }
   }
 }
 </script>
