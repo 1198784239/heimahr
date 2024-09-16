@@ -21,7 +21,7 @@
           <el-form-item>
             <el-button style="width:350px" type="primary" @click="login">登录</el-button>
           </el-form-item>
-          <el-button  @click="testAjax">测试按钮</el-button>
+          <!-- <el-button  @click="testAjax">测试按钮</el-button> -->
         </el-form>
       </el-card>
     </div>
@@ -83,17 +83,17 @@ export default {
         }
       })
     },
-    testAjax(){
-      request({
-        // url:'https://heimahr.itheima.net/api/sys/login',
-        url:'/sys/login',
-        method:'post',
-        data:{
-          mobile:'13800000002',
-          password:'hm#qd@23!'
-        }
-      })
-    }
+    // testAjax(){
+    //   request({
+    //     // url:'https://heimahr.itheima.net/api/sys/login',
+    //     url:'/sys/login',
+    //     method:'post',
+    //     data:{
+    //       mobile:'13800000002',
+    //       password:'hm#qd@23!'
+    //     }
+    //   })
+    // }
   }
 }
 </script>

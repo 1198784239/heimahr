@@ -34,7 +34,7 @@ service.interceptors.request.use(
 // response interceptor
 service.interceptors.response.use(
   response => {
-    const {res,message,success} = response.data
+    const {data,message,success} = response.data
 
     // if the custom code is not 20000, it is judged as an error.
     if (success) {
