@@ -90,7 +90,7 @@ export default {
         method:'post',
         data:{
           mobile:'13800000002',
-          password:'hm#qd@22!'
+          password:'hm#qd@23!'
         }
       })
     }
